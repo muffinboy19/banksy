@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="historyVM" type="com.banksy.app.modules.history.data.viewmodel.HistoryVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearHistory"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:id="@+id/btnLocationOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_8pxh"
+                android:paddingVertical="@dimen/_8pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_location_onprimary" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHistory"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{historyVM.historyModel.txtHistory}"
+                style="@style/txtOverpassbold20" tools:text="@string/lbl_history"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearColumnelectricb"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_25pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_25pxv">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearRowelectricbill"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtElectricbill"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_16pxh"
+                    android:singleLine="true"
+                    android:text="@{historyVM.historyModel.txtElectricbill}"
+                    style="@style/txtOverpasssemibold30" tools:text="@string/lbl_electric_bill"/>
+                <ImageView android:id="@+id/imageFavoriteOne"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_8pxh"
+                    android:layout_width="@dimen/_9pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_favorite_gray_900"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_favorite_gray_900"/>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAlltime"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:singleLine="true"
+                    android:text="@{historyVM.historyModel.txtAlltime}"
+                    style="@style/txtOverpassregular14" tools:text="@string/lbl_all_time"/>
+                <ImageView android:id="@+id/imageLocationThree"
+                    android:layout_gravity="bottom"
+                    android:layout_height="@dimen/_8pxh"
+                    android:layout_width="@dimen/_9pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_location"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_location"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerHistory"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_14pxh}" tools:itemCount="8" tools:listitem="@layout/row_history"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

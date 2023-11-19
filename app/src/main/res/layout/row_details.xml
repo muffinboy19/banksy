@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="detailsRowModel" type="com.banksy.app.modules.carddetails.data.model.DetailsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearShopping"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_12pxv"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh"
+        android:paddingTop="@dimen/_12pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <ImageButton
+            android:background="@color/{&quot;name&quot;:&quot;gray_100_01&quot;}"
+            android:id="@+id/btnCartOne"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_56pxh"
+            android:layout_width="@dimen/_56pxh"
+            android:paddingHorizontal="@dimen/_16pxh"
+            android:paddingVertical="@dimen/_16pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_cart" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnshopping"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtShopping"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_10pxh"
+                android:singleLine="true"
+                android:text="@{detailsRowModel.txtShopping}"
+                style="@style/txtOverpassbold18" tools:text="@string/lbl_shopping"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="@{detailsRowModel.txtTime}"
+                style="@style/txtOverpassregular13" tools:text="@string/lbl_3_41_pm"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+            android:layout_gravity="top"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_10pxh"
+            android:singleLine="true"
+            android:text="@{detailsRowModel.txtPrice}"
+            style="@style/txtOverpassbold17" tools:text="@string/lbl_50_35"/>
+    </LinearLayout>
+</layout>

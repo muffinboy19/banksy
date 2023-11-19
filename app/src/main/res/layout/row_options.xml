@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="optionsRowModel" type="com.banksy.app.modules.home.data.model.OptionsRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearOne"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_26pxv"
+        android:paddingEnd="@dimen/_20pxh"
+        android:paddingStart="@dimen/_20pxh"
+        android:paddingTop="@dimen/_26pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <ImageButton
+            android:background="@color/{&quot;name&quot;:&quot;red_50_01&quot;}"
+            android:id="@+id/btnPlayOne"
+            android:layout_height="@dimen/_35pxh"
+            android:layout_width="@dimen/_35pxh"
+            android:paddingHorizontal="@dimen/_8pxh"
+            android:paddingVertical="@dimen/_8pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_play" tools:ignore="ContentDescription"/>
+        <TextView android:id="@+id/txtSendmoney"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_6pxh"
+            android:text="@{optionsRowModel.txtSendmoney}"
+            style="@style/txtOverpassbold20" tools:text="@string/lbl_send_money"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCard3303"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:singleLine="true"
+            android:text="@{optionsRowModel.txtCard3303}"
+            style="@style/txtOverpassregular15" tools:text="@string/lbl_to_acc_to_acc"/>
+    </LinearLayout>
+</layout>

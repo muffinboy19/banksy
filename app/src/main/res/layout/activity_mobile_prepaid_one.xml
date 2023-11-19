@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="mobilePrepaidOneVM" type="com.banksy.app.modules.mobileprepaidone.data.viewmodel.MobilePrepaidOneVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnlocationOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:id="@+id/btnLocationOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_8pxh"
+                android:paddingVertical="@dimen/_8pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_location_onprimary" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMobileprepaid"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtMobileprepaid}"
+                style="@style/txtOverpassbold20" tools:text="@string/lbl_mobile_prepaid2"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearMobileprepaidon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrepaidto"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtPrepaidto}"
+                    style="@style/txtOverpassregular16_1" tools:text="@string/lbl_prepaid_to"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_name_primarycontainer"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/overpass"
+                    android:hint="@string/lbl_name_or_number"
+                    android:id="@+id/etName" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_10pxh"
+                    android:paddingBottom="@dimen/_19pxv"
+                    android:paddingEnd="@dimen/_20pxh"
+                    android:paddingStart="@dimen/_20pxh"
+                    android:paddingTop="@dimen/_19pxv"
+                    android:singleLine="true"
+                    android:text="@={mobilePrepaidOneVM.mobilePrepaidOneModel.etNameValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_17pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtRecent"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_7pxh"
+                    android:singleLine="true"
+                    android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtRecent}"
+                    style="@style/txtOverpassbold26" tools:text="@string/lbl_recent"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_20pxh}" tools:itemCount="5" tools:listitem="@layout/row_profile1"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAllcontact"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_14pxh"
+                    android:singleLine="true"
+                    android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtAllcontact}"
+                    style="@style/txtOverpassbold26" tools:text="@string/lbl_all_contact"/>
+                <LinearLayout android:id="@+id/linearA"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_20pxh"
+                    android:paddingStart="@dimen/_20pxh"
+                    android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtA"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtA}"
+                        style="@style/txtOverpasssemibold28" tools:text="@string/lbl_a"/>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                        android:id="@+id/lineLineoneOne"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_287pxh"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearRowovalOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageOvalOne"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_48pxh"
+                            android:layout_width="@dimen/_48pxh"
+                            android:scaleType="centerCrop"
+                            circular="@{true}"
+                            imageRes="@{@drawable/img_oval}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_oval"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnjenningsc"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtJenningschampli"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:lineSpacingExtra="@dimen/_5pxh"
+                                android:singleLine="true"
+                                android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtJenningschampli}"
+                                style="@style/txtOverpassbold16" tools:text="@string/lbl_angelina_druff"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtJenningschampli1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:lineSpacingExtra="@dimen/_4pxh"
+                                android:singleLine="true"
+                                android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtJenningschampli1}"
+                                style="@style/txtOverpassregular12_3" tools:text="@string/msg_ac_159_107_1396"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacer"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <ImageView android:id="@+id/imageCheckmarkOne"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_checkmark"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearRowovalThree"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageOvalThree"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_48pxh"
+                            android:layout_width="@dimen/_48pxh"
+                            android:scaleType="centerCrop"
+                            circular="@{true}"
+                            imageRes="@{@drawable/img_oval_48x48}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_oval_48x48"/>
+                        <LinearLayout
+                            android:id="@+id/linearColumnjenningsc1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtJenningschampli2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:lineSpacingExtra="@dimen/_9pxh"
+                                android:singleLine="true"
+                                android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtJenningschampli2}"
+                                style="@style/txtOverpassbold16" tools:text="@string/lbl_angelina_lan"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtJenningschampli3"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:lineSpacingExtra="@dimen/_7pxh"
+                                android:singleLine="true"
+                                android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtJenningschampli3}"
+                                style="@style/txtOverpassregular12_3" tools:text="@string/msg_ac_159_107_1396"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacerOne"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <ImageView android:id="@+id/imageCheckmarkThree"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_checkmark_primarycontainer"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_primarycontainer"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearB"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_20pxh"
+                    android:paddingStart="@dimen/_20pxh"
+                    android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtB"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtB}"
+                        style="@style/txtOverpasssemibold28" tools:text="@string/lbl_b"/>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                        android:id="@+id/lineLineoneThree"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_287pxh"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearRowovalFive"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageOvalFive"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_48pxh"
+                            android:layout_width="@dimen/_48pxh"
+                            android:scaleType="centerCrop"
+                            circular="@{true}"
+                            imageRes="@{@drawable/img_oval_1}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_oval_1"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnjenningsc2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtJenningschampli4"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:lineSpacingExtra="@dimen/_9pxh"
+                                android:singleLine="true"
+                                android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtJenningschampli4}"
+                                style="@style/txtOverpassbold16" tools:text="@string/lbl_belgeman"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtJenningschampli5"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:lineSpacingExtra="@dimen/_7pxh"
+                                android:singleLine="true"
+                                android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtJenningschampli5}"
+                                style="@style/txtOverpassregular12_3" tools:text="@string/msg_ac_159_107_1396"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacerTwo"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <ImageView android:id="@+id/imageCheckmarkFive"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_checkmark_primarycontainer"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_primarycontainer"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearRowovalSeven"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageOvalSeven"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_48pxh"
+                            android:layout_width="@dimen/_48pxh"
+                            android:scaleType="centerCrop"
+                            circular="@{true}"
+                            imageRes="@{@drawable/img_oval_2}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_oval_2"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnjenningsc3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtJenningschampli6"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:lineSpacingExtra="@dimen/_9pxh"
+                                android:singleLine="true"
+                                android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtJenningschampli6}"
+                                style="@style/txtOverpassbold16" tools:text="@string/lbl_brusly"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtJenningschampli7"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:lineSpacingExtra="@dimen/_7pxh"
+                                android:singleLine="true"
+                                android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtJenningschampli7}"
+                                style="@style/txtOverpassregular12_3" tools:text="@string/msg_ac_159_107_1396"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacerThree"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <ImageView android:id="@+id/imageCheckmarkSeven"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_checkmark_primarycontainer"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_primarycontainer"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearRowovalNine"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageOvalNine"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_48pxh"
+                            android:layout_width="@dimen/_48pxh"
+                            android:scaleType="centerCrop"
+                            circular="@{true}"
+                            imageRes="@{@drawable/img_oval_3}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_oval_3"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnjenningsc4"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtJenningschampli8"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:lineSpacingExtra="@dimen/_1pxh"
+                                android:singleLine="true"
+                                android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtJenningschampli8}"
+                                style="@style/txtOverpassbold16" tools:text="@string/lbl_baminu"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtJenningschampli9"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:lineSpacingExtra="@dimen/_1pxh"
+                                android:singleLine="true"
+                                android:text="@{mobilePrepaidOneVM.mobilePrepaidOneModel.txtJenningschampli9}"
+                                style="@style/txtOverpassregular12_3" tools:text="@string/msg_ac_159_107_1396"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacerFour"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <ImageView android:id="@+id/imageCheckmarkNine"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_checkmark_primarycontainer"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_primarycontainer"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><font-family xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font app:font="@font/OverpassRegular" app:fontWeight="400"/>
+    <font app:font="@font/OverpassRomanExtraBold" app:fontWeight="800"/>
+    <font app:font="@font/OverpassBold" app:fontWeight="700"/>
+    <font app:font="@font/OverpassSemiBold" app:fontWeight="600"/>
+    <font app:font="@font/OverpassRomanSemiBold" app:fontWeight="600"/>
+    <font app:font="@font/OverpassExtraBold" app:fontWeight="800"/>
+</font-family>

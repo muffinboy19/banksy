@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="drawerItemMenuModel" type="com.banksy.app.modules.itemmenu.data.model.DrawerItemMenuModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearMenu"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnsuzanejob"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_77pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_77pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+            <ImageView android:id="@+id/imageCircleimage"
+                android:layout_height="@dimen/_85pxh"
+                android:layout_width="@dimen/_85pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse108}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse108"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSuzanejobs"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{drawerItemMenuModel.txtSuzanejobs}"
+                style="@style/txtOverpasssemibold30" tools:text="@string/lbl_suzane_jobs"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtEmail"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@{drawerItemMenuModel.txtEmail}"
+                style="@style/txtOverpassregular16_2" tools:text="@string/lbl_user_gmail_com"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:drawablePadding="@dimen/_17pxh"
+                android:drawableStart="@drawable/img_user"
+                android:ellipsize="end"
+                android:fontFamily="@font/overpass"
+                android:gravity="center"
+                android:id="@+id/btnEditProfile"
+                android:layout_height="@dimen/_25pxv"
+                android:layout_width="@dimen/_111pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_edit_profile"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_900&quot;}"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_edit_profile"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:drawablePadding="@dimen/_15pxh"
+                android:drawableStart="@drawable/img_clock"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display"
+                android:gravity="center" android:id="@+id/btnHistory8"
+                android:layout_height="@dimen/_20pxv"
+                android:layout_width="@dimen/_110pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_history_8"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_900&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_history_8"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:drawablePadding="@dimen/_15pxh"
+                android:drawableStart="@drawable/img_settings_gray_900"
+                android:ellipsize="end"
+                android:fontFamily="@font/overpass"
+                android:gravity="center"
+                android:id="@+id/btnNotifications"
+                android:layout_height="@dimen/_25pxv"
+                android:layout_width="@dimen/_188pxh"
+                android:singleLine="true"
+                android:text="@string/msg_notifications_settings"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_900&quot;}"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/msg_notifications_settings"/>
+            <LinearLayout android:id="@+id/linearFavoritefood"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageFavoriteOne"
+                    android:layout_height="@dimen/_15pxh"
+                    android:layout_width="@dimen/_17pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_favorite"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_favorite"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFavoriteoutfits"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{drawerItemMenuModel.txtFavoriteoutfits}"
+                    style="@style/txtOverpasssemibold16" tools:text="@string/lbl_share_app"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

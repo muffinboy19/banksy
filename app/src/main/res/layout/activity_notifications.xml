@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationsVM" type="com.banksy.app.modules.notifications.data.viewmodel.NotificationsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNotifications"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:id="@+id/btnLocationOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_8pxh"
+                android:paddingVertical="@dimen/_8pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_location_onprimary" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotifications"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{notificationsVM.notificationsModel.txtNotifications}"
+                style="@style/txtOverpassbold20" tools:text="@string/lbl_notifications"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearColumn"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_34pxv"
+            android:paddingEnd="@dimen/_27pxh"
+            android:paddingStart="@dimen/_27pxh" android:paddingTop="@dimen/_34pxv">
+            <LinearLayout android:id="@+id/linearOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndiscounts"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDiscountssales"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtDiscountssales}"
+                        style="@style/txtOverpassbold16" tools:text="@string/lbl_money_receive"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBuythestuffyou"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtBuythestuffyou}"
+                        style="@style/txtOverpassregular13" tools:text="@string/msg_if_anyone_sent_you"/>
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialSwitchoffOne"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndiscounts1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDiscountssales1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtDiscountssales1}"
+                        style="@style/txtOverpassbold16" tools:text="@string/lbl_card_activation"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBuythestuffyou1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtBuythestuffyou1}"
+                        style="@style/txtOverpassregular13" tools:text="@string/lbl_if_card_active"/>
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialSwitchoffThree"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearThree"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndiscounts2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDiscountssales2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtDiscountssales2}"
+                        style="@style/txtOverpassbold16" tools:text="@string/lbl_update_feature"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBuythestuffyou2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtBuythestuffyou2}"
+                        style="@style/txtOverpassregular13" tools:text="@string/msg_if_any_new_update"/>
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialSwitchoffFive"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearFour"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndiscounts3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDiscountssales3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtDiscountssales3}"
+                        style="@style/txtOverpassbold16" tools:text="@string/lbl_cash_in"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBuythestuffyou3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtBuythestuffyou3}"
+                        style="@style/txtOverpassregular13" tools:text="@string/msg_if_any_cash_in_your"/>
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialSwitchoffSeven"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearFive"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndiscounts4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDiscountssales4"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtDiscountssales4}"
+                        style="@style/txtOverpassbold16" tools:text="@string/lbl_money_request"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBuythestuffyou4"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtBuythestuffyou4}"
+                        style="@style/txtOverpassregular13" tools:text="@string/msg_if_anyone_sent_you2"/>
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialSwitchoffNine"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearSix"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndiscounts5"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDiscountssales5"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtDiscountssales5}"
+                        style="@style/txtOverpassbold16" tools:text="@string/lbl_money_trasfer"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBuythestuffyou5"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtBuythestuffyou5}"
+                        style="@style/txtOverpassregular13" tools:text="@string/msg_if_you_sent_money"/>
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialSwitchoff"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearSeven"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndiscounts6"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDiscountssales6"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtDiscountssales6}"
+                        style="@style/txtOverpassbold16" tools:text="@string/msg_number_notification"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBuythestuffyou6"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtBuythestuffyou6}"
+                        style="@style/txtOverpassregular13" tools:text="@string/msg_send_notification"/>
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialSwitchoff1"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearEight"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndiscounts7"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDiscountssales7"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtDiscountssales7}"
+                        style="@style/txtOverpassbold16" tools:text="@string/msg_email_notification"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBuythestuffyou7"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtBuythestuffyou7}"
+                        style="@style/txtOverpassregular13" tools:text="@string/msg_send_notification2"/>
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialSwitchoff2"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

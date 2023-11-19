@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="totalVM" type="com.banksy.app.modules.total.data.viewmodel.TotalVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearTotal"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearColumnline"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_27pxh"
+            android:paddingStart="@dimen/_27pxh"
+            android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+            <View
+                android:background="@drawable/rectangle_bg_name_errorcontainer_radius_2"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_4pxv" android:layout_width="@dimen/_60pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMoneytransfer"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{totalVM.totalModel.txtMoneytransfer}"
+                style="@style/txtOverpassbold20" tools:text="@string/lbl_money_transfer"/>
+            <LinearLayout android:id="@+id/linearRowkatemorgan"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageCircleimage"
+                    android:layout_height="@dimen/_90pxh"
+                    android:layout_width="@dimen/_90pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse8_90x90}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse8_90x90"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnkatemorga"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtKatemorgan"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_7pxh"
+                        android:singleLine="true"
+                        android:text="@{totalVM.totalModel.txtKatemorgan}"
+                        style="@style/txtOverpassbold26" tools:text="@string/lbl_kate_morgan"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOnehundredthirt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{totalVM.totalModel.txtOnehundredthirt}"
+                        style="@style/txtOverpassregular12_3" tools:text="@string/lbl_159_107_1365"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowtotal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTotal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:text="@{totalVM.totalModel.txtTotal}"
+                    style="@style/txtOverpassregular16_3" tools:text="@string/lbl_total"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_14pxh"
+                    android:singleLine="true"
+                    android:text="@{totalVM.totalModel.txtPrice}"
+                    style="@style/txtOverpassbold26" tools:text="@string/lbl_60_00"/>
+            </LinearLayout>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;gray_200&quot;}"
+                android:id="@+id/lineLinesixtytwo"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_360pxh"/>
+            <LinearLayout android:id="@+id/linearRowvat"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtVat"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:text="@{totalVM.totalModel.txtVat}"
+                    style="@style/txtOverpassregular16_3" tools:text="@string/lbl_vat"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_14pxh"
+                    android:singleLine="true"
+                    android:text="@{totalVM.totalModel.txtPrice1}"
+                    style="@style/txtOverpassbold26" tools:text="@string/lbl_2_00"/>
+            </LinearLayout>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;gray_200&quot;}"
+                android:id="@+id/lineLinesixtythree"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_360pxh"/>
+            <LinearLayout android:id="@+id/linearRowcardnewbalan"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCardnewbalance"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:singleLine="true"
+                    android:text="@{totalVM.totalModel.txtCardnewbalance}"
+                    style="@style/txtOverpassregular14_1" tools:text="@string/msg_card_new_balance"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_14pxh"
+                    android:singleLine="true"
+                    android:text="@{totalVM.totalModel.txtPrice2}"
+                    style="@style/txtOverpassbold26" tools:text="@string/lbl_1168_25"/>
+            </LinearLayout>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;gray_200&quot;}"
+                android:id="@+id/lineLinesixtyfour"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_360pxh"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_border_name_primarycontainer1"
+                android:ellipsize="end"
+                android:fontFamily="@font/overpass"
+                android:gravity="center" android:id="@+id/btnFromSuzane"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_50pxv"
+                android:layout_width="@dimen/_360pxh"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_from_suzane"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_900&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_12pxh"
+                android:textStyle="normal" tools:text="@string/lbl_from_suzane"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:ellipsize="end"
+                android:fontFamily="@font/overpass"
+                android:gravity="center" android:id="@+id/btnSend"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_359pxh"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_11pxh"
+                android:paddingBottom="@dimen/_13pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_13pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_send"
+                android:textAllCaps="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_20pxh"
+                android:textStyle="bold" tools:text="@string/lbl_send"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.banksy.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.banksy.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity android:exported="true"
+            android:name="com.banksy.app.modules.addperson.ui.AddPersonActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.banksy.app.modules.bilpaymentsuccess.ui.BilPaymentSuccessActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.entermoney.ui.EnterMoneyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.moneyexchange.ui.MoneyExchangeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.carddetails.ui.CardDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.mobileprepaidthree.ui.MobilePrepaidThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.banktobanktwo.ui.BankToBankTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.editprofile.ui.EditProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.rechargesuccess.ui.RechargeSuccessActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.login.ui.LogInActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.notifications.ui.NotificationsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.requestsent.ui.RequestSentActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.mobileprepaidone.ui.MobilePrepaidOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.moneysentsuccess.ui.MoneySentSuccessActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.banktobankone.ui.BankToBankOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.signup.ui.SignUpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.cards.ui.CardsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.mobileprepaidtwo.ui.MobilePrepaidTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.paymentsuccess.ui.PaymentSuccessActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.profile.ui.ProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.banktobankthree.ui.BankToBankThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.history.ui.HistoryActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.sendmoneyenterpassword.ui.SendMoneyEnterPasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.addcardone.ui.AddCardOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.activity.ui.ActivityActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.sendmoney.ui.SendMoneyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.homecontainer.ui.HomeContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.receivemoneyrequesttabcontainer.ui.ReceiveMoneyRequestTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.paybill.ui.PayBillActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.electricbill.ui.ElectricBillActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.splash.ui.SplashActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.banksy.app.modules.onboarding.ui.OnboardingActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

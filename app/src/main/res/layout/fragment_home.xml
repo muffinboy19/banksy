@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homeVM" type="com.banksy.app.modules.home.data.viewmodel.HomeVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumngridOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageGridOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_grid"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_grid"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWelcomeback"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:singleLine="true"
+                android:text="@{homeVM.homeModel.txtWelcomeback}"
+                style="@style/txtOverpassbold20" tools:text="@string/lbl_welcome_back"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearHome"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_34pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_34pxv">
+            <LinearLayout android:id="@+id/linearColumntotalbala"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_90pxh"
+                android:paddingStart="@dimen/_90pxh"
+                android:paddingTop="@dimen/_17pxv" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTotalbalance"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_5pxh"
+                    android:singleLine="true"
+                    android:text="@{homeVM.homeModel.txtTotalbalance}"
+                    style="@style/txtOverpassregular16" tools:text="@string/lbl_total_balance"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_11pxh"
+                    android:singleLine="true"
+                    android:text="@{homeVM.homeModel.txtPrice}"
+                    style="@style/txtOverpassextrabold40" tools:text="@string/lbl_3_567_12"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerOptions"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2" itemSpace="@{@dimen/_24pxh}"
+                tools:itemCount="6" tools:listitem="@layout/row_options"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

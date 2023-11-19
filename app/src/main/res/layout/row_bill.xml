@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="billRowModel" type="com.banksy.app.modules.paybill.data.model.BillRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearOne"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_15pxv"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh"
+        android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_yellow_a400_radius_12"
+            android:id="@+id/btnLightbulbOne"
+            android:layout_height="@dimen/_35pxh"
+            android:layout_width="@dimen/_35pxh"
+            android:paddingHorizontal="@dimen/_8pxh"
+            android:paddingVertical="@dimen/_8pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_lightbulb_onprimary" tools:ignore="ContentDescription"/>
+        <TextView android:id="@+id/txtElectricitybill"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_6pxh"
+            android:text="@{billRowModel.txtElectricitybill}"
+            style="@style/txtOverpassbold20" tools:text="@string/msg_electricity_bill"/>
+        <TextView android:id="@+id/txtCard3303"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_5pxh"
+            android:text="@{billRowModel.txtCard3303}"
+            style="@style/txtOverpassregular15_1" tools:text="@string/msg_pay_bill_of_this"/>
+    </LinearLayout>
+</layout>

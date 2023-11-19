@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="historyRowModel" type="com.banksy.app.modules.history.data.model.HistoryRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnoctober"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearRowoctober"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOctober"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{historyRowModel.txtOctober}"
+                style="@style/txtOverpasssemibold14" tools:text="@string/lbl_october"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtDate"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="@{historyRowModel.txtDate}"
+                style="@style/txtOverpassregular12_2" tools:text="@string/lbl_30_10_2020"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearRowamount"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAmount"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{historyRowModel.txtAmount}"
+                style="@style/txtOverpassregular14" tools:text="@string/lbl_amount"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{historyRowModel.txtPrice}"
+                style="@style/txtOverpassbold14" tools:text="@string/lbl_480"/>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtUnpaid"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="@{historyRowModel.txtUnpaid}"
+                style="@style/txtOverpasssemibold12_2" tools:text="@string/lbl_paid"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
